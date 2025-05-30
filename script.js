@@ -11,7 +11,7 @@ form.addEventListener('submit', async (e) => {
     target = form.enter.value;
   }
   try{
-    let res = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=899db8ac577741a1a3e133426253005&amp;q=London&amp;days=14&amp;aqi=no&amp;alerts=no`)
+    let res = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=899db8ac577741a1a3e133426253005&q=${target}&amp;days=14&aqi=no&amp;alerts=no`)
       if(!res.ok){
         throw "Error " + response.status;
       }
